@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espiral de Fibonacci</title>
+
+    <!-- Conecta o arquivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabeçalho da página -->
+    <header class="cabecalho">
+        <h1>Espiral de Fibonacci</h1>
+        <p>Projeto de Desenvolvimento Web com HTML, CSS e JavaScript</p>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main class="conteudo-principal">
+        <!-- Seção de explicação -->
+        <section class="painel informacoes">
+            <h2>Sobre o projeto</h2>
+            <p>
+                Clique no botão para gerar a sequência de Fibonacci.
+                A cada novo número, a lista aumenta e o desenho central evolui.
+            </p>
+        </section>
+
+        <!-- Seção de controles -->
+        <section class="painel controles">
+            <h2>Controles</h2>
+
+            <div class="grupo-botoes">
+                <button id="btnAdicionar">Adicionar próximo número</button>
+                <button id="btnReiniciar">Reiniciar sequência</button>
+            </div>
+
+            <p id="mensagem" class="mensagem">
+                Clique no botão para começar.
+            </p>
+        </section>
+
+        <!-- Seção que mostra a sequência -->
+        <section class="painel sequencia">
+            <h2>Sequência de Fibonacci</h2>
+            <div id="listaFibonacci" class="lista-fibonacci"></div>
+        </section>
+
+        <!-- Seção do desenho -->
+        <section class="painel desenho">
+            <h2>Representação visual</h2>
+            <div id="espiral" class="espiral"></div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <p>Desenvolvido por Rennan para a disciplina de Desenvolvimento Web</p>
+    </footer>
+
+    <!-- Conecta o arquivo JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>
