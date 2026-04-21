@@ -1,0 +1,161 @@
+/* =========================================
+   RESET BÁSICO
+   Remove margens padrões e facilita o controle do layout
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================================
+   ESTILO GERAL DO BODY
+   Define fonte, cor de fundo e espaçamento geral
+========================================= */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f7fb;
+    color: #1f2937;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================================
+   CABEÇALHO E RODAPÉ
+========================================= */
+.cabecalho,
+.rodape {
+    background-color: #111827;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.cabecalho h1 {
+    margin-bottom: 8px;
+}
+
+/* =========================================
+   ÁREA PRINCIPAL
+   Usa Grid para organizar os painéis
+========================================= */
+.conteudo-principal {
+    width: 90%;
+    max-width: 1200px;
+    margin: 24px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    flex: 1;
+}
+
+/* =========================================
+   PAINÉIS
+========================================= */
+.painel {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.painel h2 {
+    margin-bottom: 12px;
+    color: #0f172a;
+}
+
+/* =========================================
+   BOTÕES
+========================================= */
+.grupo-botoes {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+
+button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+/* =========================================
+   MENSAGEM DE STATUS
+========================================= */
+.mensagem {
+    font-weight: bold;
+    color: #374151;
+}
+
+/* =========================================
+   LISTA DOS NÚMEROS
+========================================= */
+.lista-fibonacci {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.numero {
+    background-color: #dbeafe;
+    color: #1e3a8a;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* =========================================
+   ÁREA DA ESPIRAL
+========================================= */
+.espiral {
+    min-height: 320px;
+    border: 2px dashed #cbd5e1;
+    border-radius: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 12px;
+}
+
+/* Cada bloco representa visualmente um termo */
+.bloco-espiral {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #bfdbfe;
+    color: #1e3a8a;
+    font-weight: bold;
+    border: 2px solid #60a5fa;
+    border-radius: 6px;
+}
+
+/* =========================================
+   RESPONSIVIDADE
+   Em telas menores, os painéis ficam em uma coluna
+========================================= */
+@media (max-width: 768px) {
+    .conteudo-principal {
+        grid-template-columns: 1fr;
+    }
+
+    .grupo-botoes {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+}
